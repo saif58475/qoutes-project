@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes of the day </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="icon" href="img/iconmonstr-quote-3.png">
+</head>
+<body>
+    <!-- the section that the user will read at first-->
+   <div class="vh-100 align-items-center d-flex ">
+       <!-- the inner div -->
+    <div class="container shadow text-center  ">
+        <h1 class="text-danger fw-bolder ">QUOTE OF THE DAY</h1>
+        <p class="my-5 fs-4">Press the button below to recieve a random quote!</p>
+        <button class="my-3 px-5 py-2 btn btn-outline-danger" onclick="presson()">New Quote</button>
+
+        <!-- the place where the quotes will be seen -->
+        <div class="my-3 container text-center">
+          <div id="demo"></div>   
+          </div>
+          </div>        
+   </div>
+   
+   <!-- the users input section -->
+ <div class="container text-center shadow p-5">
+<h2 class="fst-italic fw-bold text-primary">HERE YOU CAN ENTER YOUR SPECIAL QUOTE</h2><br><br>
+<label class="fw-bolder fs-3 text-primary">QUOTE:</label><br>
+<input type="text" id="qoute" placeholder="“ write between doubleqoutes ”" class="w-50 "><br><br>
+<label class="fw-bolder fs-3 text-primary">NAME:</label><br>
+<input type="text" id="name" placeholder="your name" class="w-50"><br><br>
+<button class="btn btn-outline-info px-5" onclick="selfqoutes()">save</button>
+
+ </div>
+
+
+
+    <script src="quotes.js"></script>
+</body>
+</html>
