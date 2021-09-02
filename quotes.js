@@ -47,11 +47,16 @@ var quotesarray =[
 
 },
 ]
+if(localStorage.getItem("item") == null ){
+     alert(" THIS IS YOUR FIRST TIME OR YOU DIDN'T ADDED ANY QOUTE YET ");
+} else{
+    quotesarray.push(JSON.parse(localStorage.getItem("item")));
+}
 
 // the function that selects a random record
 function presson(){
+    
     var i = Math.floor(Math.random()*quotesarray.length);
-
     document.getElementById("demo").innerHTML = `<p>${quotesarray[i].quote}</p> 
     <h2>${quotesarray[i].name}</h2> `;
 }
@@ -64,7 +69,9 @@ function selfqoutes(){
         quote : qt.value,
         name : nm.value
     }
-    quotesarray.push(entry);
+    localStorage.setItem("item",JSON.stringify(entry));
+    quotesarray.push(JSON.parse(localStorage.getItem("item")));
+    // quotesarray.push(entry);
        clear();
     
 }
@@ -73,3 +80,4 @@ function clear(){
     qt.value = '' ;
     nm.value = '' ;
 }
+
